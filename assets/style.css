@@ -17,21 +17,24 @@ Global Styles
   --black: #000;
   --success: #00bf4f;
   --successHover: #00ce55;
-  --info: #00aeff;
+  --info: #2b98ca;
+  --infoHover: #00aeff;
   --warning: #fbbc05;
   --warningHover: #ffa000;
   --danger: #ea4335;
-  --dangerHover: #ff3838;
+  --dangerHover: #ff0000;
 }
 
 *{
-  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
 html,
 body {
+  scroll-behavior: smooth;
   position: relative;
   height: 100%;
   background: var(--white);
@@ -176,9 +179,9 @@ h4 strong {
 }
 
 .btn.btn-sm {
-  font-size: 14px;
-  line-height: 24px;
-  padding: 7px 20px;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 7px 15px;
 }
 
 .btn .ico {
@@ -228,7 +231,7 @@ h4 strong {
 .btn-info:hover,
 .btn-info:active,
 .btn-info:focus {
-  background: var(--info) !important;
+  background: var(--infoHover) !important;
 }
 .btn-info.btn-bordered {
   border-color: var(--info);
@@ -237,7 +240,7 @@ h4 strong {
 .btn-info.btn-bordered:hover,
 .btn-info.btn-bordered:active,
 .btn-info.btn-bordered:focus {
-  border-color: var(--info);
+  border-color: var(--infoHover);
   color: var(--white);
 }
 .btn-warning {
@@ -260,6 +263,7 @@ h4 strong {
 }
 .btn-danger {
   background: var(--danger);
+  color: var(--white) !important;
 }
 .btn-danger:hover,
 .btn-danger:active,
@@ -1354,6 +1358,17 @@ td .btn {
   margin-bottom: 3px;
 }
 /* End Data table */
+
+/* Start Back to top */
+#btn-back-to-top {
+  position: fixed;
+  border-radius: 0;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 1111;
+}
+/* End Back to top */
 
 /* Footer */
 footer.sticky-footer {
