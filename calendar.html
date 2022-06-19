@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Raman Associates">
+    <meta name="author" content="">
+
+    <title>Calendar - Raman Associates</title>
+
+    <!-- Favicon -->
+    <link href="/assets/images/logo.png" rel="icon">
+    <link rel="stylesheet" href="/assets/plugin/poppins_font/poppins_font.css">
+
+    <!-- Material Design Icon -->
+    <link rel="stylesheet" href="/assets/fonts/material-design/css/materialdesignicons.css">
+    <!-- Calendar Plugin -->
+    <link rel="stylesheet" type="text/css" href="/assets/plugin/calendar/css/calendar.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/plugin/calendar/css/calendar.royal-navy.min.css" />
+    <!-- Bootstrap 5 CDN Link -->
+    <link href="/assets/plugin/bootstrap/css/bootstrap5.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/style.css">
+
+</head>
+
+<body>
+    <div class="main-menu">
+        <header class="header">
+            <a href="index.html" class="logo">
+                <span class="ico fa fa-gavel"></span> Raman Associates
+            </a>
+            <button type="button" class="button-close fa fa-times js__menu_close"></button>
+            <div class="user">
+                <a href="#" class="avatar"><img src="assets/images/logo.png" alt=""></a>
+            </div>
+            <!-- /.user -->
+        </header>
+        <!-- /.header -->
+        <div class="content">
+            <div class="navigation">
+                <h5 class="title">Home</h5>
+                <!-- /.title -->
+                <ul class="menu js__accordion">
+                    <li class="">
+                        <a class="" href="index.html"><i class="menu-icon mdi mdi-view-dashboard"></i><span>&nbsp;
+                                Dashboard</span></a>
+                    </li>
+                </ul>
+                <!-- /.menu js__accordion -->
+                <h5 class="title">Component</h5>
+                <!-- /.title -->
+                <ul class="menu js__accordion">
+                    <li class="current active">
+                        <a class="parent-item js__control" href="#"><i
+                                class="menu-icon mdi mdi-file"></i><span>Pages</span><span
+                                class="menu-arrow fa fa-angle-down"></span></a>
+                        <ul class="sub-menu js__content">
+                            <li><a href="tables-datatable.html"><i class="fa fa-table"></i> &nbsp; Data Table</a></li>
+                            <li class="current"><a href="#"><i class="fa fa-calendar"></i> &nbsp;
+                                    Calendar</a>
+                            </li>
+                            <li><a href="404.html"><i class="fa fa-bug"></i> &nbsp; 404 Error</a></li>
+                            <li><a href="form-validation.html"><i class="fa fa-book"></i> &nbsp; Form
+                                    Validation</a></li>
+                            <li><a href="form.html"><i class="fa fa-book"></i> &nbsp; Form</a></li>
+                            <li><a href="login.html"><i class="fa fa-lock"></i> &nbsp; Login</a></li>
+                        </ul>
+                        <!-- /.sub-menu js__content -->
+                    </li>
+                </ul>
+                <!-- /.menu js__accordion -->
+            </div>
+            <!-- /.navigation -->
+        </div>
+        <!-- /.content -->
+    </div>
+    <!-- /.main-menu -->
+
+    <div class="fixed-navbar">
+        <div class="pull-left">
+            <button type="button"
+                class="menu-mobile-button glyphicon glyphicon-menu-hamburger js__menu_mobile"></button>
+            <h1 class="page-title">Calendar</h1>
+            <!-- /.page-title -->
+        </div>
+        <!-- /.pull-left -->
+    </div>
+    <!-- /.fixed-navbar -->
+
+    <div id="wrapper">
+
+        <div class="main-content">
+
+            <div class="row small-spacing">
+
+                <div class="col-xs-12">
+
+                    <div id="calendar"></div>
+
+                    <script src="/assets/scripts/jquery.min.js"></script>
+                    <script src="/assets/plugin/calendar/js/calendar.min.js"></script>
+
+                    <script>
+                        // initialize your calendar, once the page's DOM is ready
+                        $(document).ready(function () {
+
+                            $('#calendar').evoCalendar({
+                                // settingName: settingValue
+                                theme: "Royal Navy",
+                                todayHighlight: "true",
+                                eventHeaderFormat: "MM d, yyyy",
+                                calendarEvents: [
+                                    {
+                                        id: 'event1', // Event's ID (required)
+                                        name: "New Year", // Event name (required)
+                                        date: "January/1/2022", // Event date (required)
+                                        description: `Happy New Year.  <br> dasbfkad`,
+                                        type: "event", // Event type (required)
+                                        everyYear: true, // Same event every year (optional)
+                                        color: "yellow"
+                                    },
+                                    {
+                                        id: 'event1', // Event's ID (required)
+                                        name: "New Year", // Event name (required)
+                                        date: "January/1/2022", // Event date (required)
+                                        description: "Hello World.",
+                                        type: "event1", // Event type (required)
+                                        everyYear: true, // Same event every year (optional)
+                                        color: "blue"
+                                    },
+                                    {
+                                        id: 'id1',
+                                        name: "Vacation Leave",
+                                        badge: "02/13 - 02/15", // Event badge (optional)
+                                        badgeColor: "blue",
+                                        date: ["February/13/2020", "February/15/2020"], // Date range
+                                        description: "Vacation leave for 3 days.", // Event description (optional)
+                                        type: "event",
+                                        color: "#63d867" // Event custom color (optional)
+                                    }
+                                ]
+                            })
+                        })
+                    </script>
+
+                    <!-- Start Upcoming Events -->
+                    <h2><strong>Upcoming Events</strong></h2>
+                    <div class="card-group mb-3">
+                        <div class="card mx-2 shadow">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>Case Name</strong></h5>
+                                <p class="card-text"><small>Case Type</small>
+                                </p>
+                                <p class="card-text"><small>Case Date</small></p>
+                            </div>
+                        </div>
+
+                        <div class="card mx-2">
+                            <div class="card-body shadow">
+                                <h5 class="card-title"><strong>Case Name</strong></h5>
+                                <p class="card-text"><small>Case Type</small>
+                                </p>
+                                <p class="card-text"><small>Case Date</small></p>
+                            </div>
+                        </div>
+
+                        <div class="card mx-2">
+                            <div class="card-body shadow">
+                                <h5 class="card-title"><strong>Case Name</strong></h5>
+                                <p class="card-text"><small>Case Type</small>
+                                </p>
+                                <p class="card-text"><small>Case Date</small></p>
+                            </div>
+                        </div>
+                        <div class="card mx-2">
+                            <div class="card-body shadow">
+                                <h5 class="card-title"><strong>Case Name</strong></h5>
+                                <p class="card-text"><small>Case Type</small>
+                                </p>
+                                <p class="card-text"><small>Case Date</small></p>
+                            </div>
+                        </div>
+                        <div class="card mx-2">
+                            <div class="card-body shadow">
+                                <h5 class="card-title"><strong>Case Name</strong></h5>
+                                <p class="card-text"><small>Case Type</small>
+                                </p>
+                                <p class="card-text"><small>Case Date</small></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- End Upcoming Events -->
+
+                </div>
+
+            </div>
+
+            <!-- /.col-xs-12 -->
+        </div>
+    </div>
+    <!-- /.main-content -->
+
+    </div>
+    <!--/#wrapper -->
+
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; Raman Associate
+                    <script type="text/JavaScript"> var theDate=new Date(); document.write(theDate.getFullYear()) 
+				</script>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/scripts/all.min.js"></script>
+    <script src="assets/plugin/nprogress/nprogress.js"></script>
+    <script src="assets/scripts/main.js"></script>
+
+</body>
+
+</html>
